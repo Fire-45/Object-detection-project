@@ -1,0 +1,29 @@
+h1{
+
+    
+    
+    color:white;
+    text-align: center;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   width: 100%;
+}
+
+body{
+
+    
+    background-size: cover;
+}
+
+.A{
+
+    
+    background-color: royalblue;
+    border-style: ridge;
+    border-width: 10px;
+    border-color: lightskyblue;
+    padding-top: 15px;
+    padding-right:30px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+}
