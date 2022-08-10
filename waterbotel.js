@@ -34,7 +34,7 @@ function gotResult(error,result){
 }
 
 function preload(){
-    img = loadImage("95F7C076-0E51-4FA5-B34B-F2CB7DF4D454.jpeg");
+    img = loadImage("EFB8FDA7-8D9B-4383-81BB-3C2415CA409E.jpeg");
 }
 
 
@@ -54,7 +54,7 @@ function draw(){
             document.getElementById("status").innerHTML = "Objects detected";
             confidence = Math.floor(object_RESULTS[i].confidence*100);
 
-            fill("white");
+            fill("red");
             textSize(30);
             text(object_RESULTS[i].label +  " confidence:"+confidence,object_RESULTS[i].x,object_RESULTS[i].y);
             //text(confidence,object_RESULTS[i].x,object_RESULTS[i].y);

@@ -5,7 +5,7 @@
  
 
 function setup(){
-    canvas = createCanvas(600,400);
+    canvas = createCanvas(700,600);
     canvas.position(370,400);
 
     object_detector = ml5.objectDetector("cocossd",modelLoaded);
@@ -34,13 +34,13 @@ function gotResult(error,result){
 }
 
 function preload(){
-    img = loadImage("95F7C076-0E51-4FA5-B34B-F2CB7DF4D454.jpeg");
+    img = loadImage("058393CD-8E60-49AC-969E-83EE5DDCAF68.jpeg");
 }
 
 
 function draw(){
 
-    image(img,0,0,600,400);
+    image(img,0,0,700,600);
 
     object_detector.detect(img,gotResult);
 
@@ -54,13 +54,13 @@ function draw(){
             document.getElementById("status").innerHTML = "Objects detected";
             confidence = Math.floor(object_RESULTS[i].confidence*100);
 
-            fill("white");
+            fill("blue");
             textSize(30);
-            text(object_RESULTS[i].label +  " confidence:"+confidence,object_RESULTS[i].x,object_RESULTS[i].y);
+            text(object_RESULTS[i].label +  " confidence:"+confidence,object_RESULTS[i].x,object_RESULTS[i].y + 10);
             //text(confidence,object_RESULTS[i].x,object_RESULTS[i].y);
 
             noFill();
-            stroke("white");
+            stroke("blue");
             rect(object_RESULTS[i].x,object_RESULTS[i].y,object_RESULTS[i].width,object_RESULTS[i].height);
 
         }
